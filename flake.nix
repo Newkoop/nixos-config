@@ -13,7 +13,6 @@
       self,
       nixpkgs,
       home-manager,
-      musnix,
       ...
     }:
     {
