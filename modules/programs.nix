@@ -15,6 +15,7 @@
     spotify
     spicetify-cli
     telegram-desktop
+    pgadmin4
   ];
 
   hardware.xone.enable = true;
