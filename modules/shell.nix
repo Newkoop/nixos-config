@@ -3,11 +3,13 @@
 {
   users.users.maikel.shell = pkgs.zsh;
 
-  environment.systemPackages = with pkgs; [
+   environment.systemPackages = with pkgs; [
     zsh
     tmux
     nerd-fonts.jetbrains-mono
+    direnv
   ];
+
 
   programs.zsh.enable = true;
 
@@ -55,6 +57,9 @@
       # Load and initialise completion system
       autoload -Uz compinit
       compinit
+
+      # Enable direnv integration
+      eval "$(direnv hook zsh)"
 
       # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh
       [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
